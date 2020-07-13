@@ -9,7 +9,7 @@ def fun_eggcartons(eggs):
 
 	carton = eggs // 12
 
-	if carton % eggs > 12:
+	if eggs % 12 != 0:
 		return carton + 1
 	else:
 		return carton
