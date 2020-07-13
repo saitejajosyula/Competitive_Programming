@@ -9,4 +9,11 @@ import math
 def fun_circlesintersect(x1, y1, r1, x2, y2, r2):
 	# your code goes here
 	dist = int (math.sqrt((x2-x1)**2 + (y2-y1)**2))
-	return False 
+	rad = (r1+r2)**2 
+
+	if dist == rad:
+		return True
+	elif dist < rad:
+		return False
+	else:
+		return False 
