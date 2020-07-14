@@ -16,7 +16,12 @@ def isrighttriangle(x1, y1, x2, y2, x3, y3):
 
 	if maximum == a and math.isclose(a**2,(b**2+c**2)):
 		return True
-
+	elif maximum == b and math.isclose(b**2,(a**2+c**2)):
+		return True
+	elif maximum == c and math.isclose(c**2,(a**2+b**2)):
+		return True
+	else:
+		return False
 
 def distance(x1, y1, x2,y2):
 
