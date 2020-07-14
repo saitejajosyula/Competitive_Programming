@@ -16,6 +16,6 @@ def dicetoorderedhand(a, b, c):
 	x = max(a, b, c)
 	y = min(a, b, c)
 	mid = (a+b+c) - x - y
-	output = x*100 + y * 10 + mid
+	output = x*100 + mid * 10 + y
 	return output
 
