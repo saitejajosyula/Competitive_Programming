@@ -12,5 +12,10 @@
 # min(a,b,c) to find the smallest.
 
 def dicetoorderedhand(a, b, c):
-	# your code goes here
-	pass
+
+	x = max(a, b, c)
+	y = min(a, b, c)
+	mid = (a+b+c) - x - y
+	output = x*100 + y * 10 + mid
+	return output
+
