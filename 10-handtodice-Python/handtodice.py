@@ -7,4 +7,14 @@
 
 def handtodice(hand):
 	# your code goes here
-	pass
+
+	tup = ()
+	while(hand > 0):
+		
+		x = hand % 10
+
+		tup = tup + (x,)
+
+		hand = hand //10
+
+	return tup[::-1]
