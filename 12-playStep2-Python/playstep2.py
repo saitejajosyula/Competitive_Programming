@@ -81,8 +81,13 @@ def playstep2(hand, dice):
 		second = [int(i) for i in str(second)]
 
 		lis = [i for i in second if second.count(i) == 1][0]
+
 		index = second.index(lis)
+		
 		second[index] = temp[-1]
+		
 		second.sort(reverse = True)
+		
 		temp.pop(-1)
+		
 		return (listToInt(second), listToInt(temp))
