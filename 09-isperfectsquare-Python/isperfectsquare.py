@@ -7,9 +7,9 @@ import math
 def isperfectsquare(n):
 	# your code goes here
 	if(type(n)== int):
-		square = math.sqrt(n)
-		if (square - math.floor(square)) == 0:
-			return True
-	
-	return False
+		i = 1
+		while (i * i <= n):
 
+			if(n%i == 0 and n/i == i):
+				return True
+		return False
