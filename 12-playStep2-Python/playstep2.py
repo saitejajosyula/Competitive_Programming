@@ -28,6 +28,29 @@
 # into a sorted hand.
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
 
+def handToDice(hand):
+
+	tup = ()
+
+	while(hand > 0):
+	
+		x = hand % 10
+		tup = tup + (x,)
+		hand = hand//10
+
+	return tup[::-1]
+
+def diceToOrderedHand(a, b, c):
+
+	x = max(a, b, c)
+	y = min(a, b, c)
+
+	mid = (a+b+c) - x - y
+
+	output = x * 100 + mid * 10 + y
+
+	return output
+
 def playstep2(hand, dice):
 	# your code goes here
 	pass
