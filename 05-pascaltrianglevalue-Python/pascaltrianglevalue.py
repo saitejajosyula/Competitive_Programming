@@ -6,7 +6,11 @@
 # are not legal values, return None, instead of crashing. 
 
 
-
-
 def fun_pascaltrianglevalue(row, col):
-	return 1
+
+	if col == 0:
+		return 1
+	if row == 0:
+		return 0
+	else:
+		return fun_pascaltrianglevalue(row-1, col) + fun_pascaltrianglevalue(row-1, col-1)
