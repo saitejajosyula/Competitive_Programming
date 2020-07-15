@@ -27,6 +27,15 @@
 # Hint: Then, you may wish to use diceToOrderedHand(a, b, c) at the end to convert the 3 dice back
 # into a sorted hand.
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
+import math
+
+def listToInt(x):
+
+	tp = ""
+	for i in x:
+		tp = tp + str(i)
+
+	return int(tp)
 
 def handToDice(hand):
 
@@ -53,4 +62,27 @@ def diceToOrderedHand(a, b, c):
 
 def playstep2(hand, dice):
 	# your code goes here
-	pass
+	temp = [int(i) for i in str(dice)]
+
+	first = handToDice(hand)
+
+	if(first[0] != first[1] != first[2]):
+
+		first = [int(i) for i in str(hand)]
+
+		for j in range(-1, -3, -1):
+			first[j] = temp[-1]
+			temp.pop(-1)
+		first.sort(reverse = True)
+
+		return(listToInt(first), listToInt(temp))
+	else:
+		second = hand
+		second = [int(i) for i in str(second)]
+
+		lis = [i for i in second if second.count(i) == 1][0]
+		index = second.index(lis)
+		second[index] = temp[-1]
+		second.sort(reverse = True)
+		temp.pop(-1)
+		return (listToInt(second), listToInt(temp))
