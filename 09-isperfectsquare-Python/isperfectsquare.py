@@ -7,7 +7,7 @@ import math
 
 def isperfectsquare(n):
 	# your code goes here
-	if(type(n)== int):
+	if(type(n)== int and n > 0):
 		square = math.sqrt(n)
 		if(int(square + 0.5) ** 2 ) == n:
 			return True
