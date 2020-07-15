@@ -39,8 +39,10 @@ locations['Asia']['China'] = ['Shanghai']
 
 def sortUSA():
     print(1)
-    out = locations['North America']['USA']
-    print(sorted(out))
+    out = sorted(locations['North America']['USA'])
+    for i in out:
+        return i
+
 
 sortUSA()
 
@@ -55,6 +57,6 @@ def alphaAsia():
         cities.append(city)
     sort = sorted(cities)
     for i in sort:
-        print(i)
+        return i
 
 alphaAsia()
