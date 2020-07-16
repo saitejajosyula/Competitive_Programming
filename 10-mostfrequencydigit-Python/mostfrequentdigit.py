@@ -5,7 +5,7 @@
 def mostfrequentdigit(n):
 	# your code goes here
 	
-	s = str(n)  #24
+	s = str(n) 
 
 	if len(s) == 1:
 		return n
