@@ -10,6 +10,34 @@
 # assert(nthHappyNumber(6) == 28)
 # assert(nthHappyNumber(7) == 31)
 
+def squaresum(n):
+
+	s = 0
+
+	while n >0 :
+		s = s + (n % 10) * (n % 10)
+		n = n// 10
+	
+	return s
+
+def ishappynumber(n):
+
+	if n <= 0:
+		return False
+	
+	if n == 1:
+
+		return True
+
+	total = squaresum(n)
+
+	while(total != 4) :
+
+		total = squaresum(total)
+
+		if total == 1:
+			return True
+	return False
 
 def fun_nth_happy_number(n):
 	return 0
