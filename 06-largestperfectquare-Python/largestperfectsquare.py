@@ -10,15 +10,14 @@
 import math
 
 def largestperfectsquare(n):
-	# your code goes here
-	if n > 0:
+	
+	large = 0
 
-		d = int(math.sqrt(n))
+	for i in range(n):
 
-		if d*d == n:
-			return n
-		else:
-			d = d - 1
+		if i**2 <= n:
 
-			d = d * d
-			return d
+			large = i**2
+	
+	return large
+	
