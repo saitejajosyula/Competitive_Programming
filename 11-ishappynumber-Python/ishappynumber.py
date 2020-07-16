@@ -30,4 +30,14 @@ def ishappynumber(n):
 
 		n = n // 10
 
-	return True
+	return s
+
+	result = n
+
+	while(result != 1 and result !=4) :
+		result = ishappynumber(result)
+
+	if result == 1:
+		return True
+	elif result == 4:
+		return False
