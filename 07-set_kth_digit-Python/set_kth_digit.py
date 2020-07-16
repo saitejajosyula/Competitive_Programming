@@ -8,18 +8,13 @@
 
 def fun_set_kth_digit(n, k, d):
 
-	a = str(n) 
-	ch = str(d) 
+	div = (n//10**k)
 
-	lis = [i for i in a]
+	rem = (div % 10) * (10**k)
 
-	new_lis = []
-	for i in reversed(lis):
-		new_lis.append(i)
+	add = (10**k) * d
 
-	lis[k] = ch 
+	output = n - rem + add
 
-	new = "".join(new_lis)[::-1]
-
-	return int(new)
+	return output
 
