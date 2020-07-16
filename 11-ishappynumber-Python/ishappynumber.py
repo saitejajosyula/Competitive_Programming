@@ -26,28 +26,18 @@ def squaresum(n):
 
 def ishappynumber(n):
 	
-	rem = 0
-	s = 0
-	if n < 1:
-
+	if n <= 0:
 		return False
-
-	while n > 0:
-
-		rem = n % 10
-
-		s = s + (rem * rem)
-
-		n = n // 10
-
-	return s
-
-	result = n
-
-	while(result != 1 and result !=4) :
-		result = ishappynumber(result)
-
-	if result == 1:
+	if n == 1:
 		return True
-	elif result == 4:
-		return False
+	
+	total = squaresum(n)
+
+	while(total != 4):
+
+		total = squaresum(total)
+
+		if total == 1:
+			return True
+	
+	return False
