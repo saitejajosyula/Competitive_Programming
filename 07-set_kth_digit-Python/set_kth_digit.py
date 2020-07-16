@@ -8,17 +8,18 @@
 
 def fun_set_kth_digit(n, k, d):
 
-	a = str(n) #468
-	ch = str(d) #1
+	a = str(n) 
+	ch = str(d) 
 
-	lis = []
+	lis = [i for i in a]
 
-	for i in a:
-		lis.append(i) #4 6 8
+	new_lis = []
+	for i in reversed(lis):
+		new_lis.append(i)
 
-	lis[k] = ch # lis[0]=1
+	lis[k] = ch 
 
-	new = "".join(lis)
+	new = "".join(new_lis)[::-1]
 
 	return int(new)
 
