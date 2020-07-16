@@ -8,13 +8,28 @@
 
 def fun_set_kth_digit(n, k, d):
 
+	flag = False
+	
+	if n < 0:
+
+		flag = True
+
+		n = abs(n)
+
 	div = (n//10**k)
 
 	rem = (div % 10) * (10**k)
 
 	add = (10**k) * d
 
-	output = n - rem + add
+	output = n - rem + add 
 
-	return output
+	if flag:
+
+		return -1 * output
+
+	else:
+
+		return output
+
 
