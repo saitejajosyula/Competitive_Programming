@@ -10,26 +10,14 @@ def isrotated(str1, str2):
 	if len(str1) != len(str2):
 		return False
 
-	if str1 == (str2)[::-1]:
-		return True
+	ch = str2[0]
 
-
-	clock = ""
-	# clock = clock + str1[9:] + str1[:9]
-	clock = str2[len(str2)-1:]+ clock + str2[:len(str2)-1]
-
-	anticlock = ""
-
-	anticlock = anticlock + str2[len(str2)-2:] + str2[:len(str2)-2]
-
-	return clock == str1 or anticlock == str1
+	idex = str1.find(ch)
 	
-	if str1.index('J') != str2.index('J'):
-		
-		ant_clock = ""
-		ch = str1.index('J')
-		
-		ant_clock = ant_clock + str1[ch:] + str1[:ch]
-		
-		return ant_clock == str2
+	clock = ""
+
+
+	clock = str1[index: ] + clock + str1[:index]
+
+	return clock == str2 
 		
