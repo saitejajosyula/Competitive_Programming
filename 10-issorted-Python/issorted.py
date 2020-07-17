@@ -7,5 +7,20 @@
 
 def issorted(a):
 	# your code goes here
+	# if len(a) == 0:
+	# 	print("Yes")
+	# 	return True
+	# else:
+		flag = False
 
-	return all(a[i] <= a[i+1] for i in range(len(a)-1))
+		for i in range(len(a)-1):
+
+			if all(a[i] <= a[i+1]):
+				flag = True
+
+			return flag
+
+		if flag:
+			return True
+		else:
+			return False
