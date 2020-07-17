@@ -5,4 +5,11 @@
 
 def removeduplicate(text):
 	# Your code goes here
-	pass
+	s = ""
+	n = len(text)
+	for i in range(0, n):
+
+		if text[i] not in s:
+			s = s+text[i]
+	# print(s)
+	return s
