@@ -10,6 +10,9 @@ def isrotated(str1, str2):
 	if len(str1) != len(str2):
 		return False
 
+	if str1 == str2[::-1]:
+		return True
+
 	ch = str2[0]
 
 	idex = str1.find(ch)
@@ -17,7 +20,7 @@ def isrotated(str1, str2):
 	clock = ""
 
 
-	clock = str1[index: ] + clock + str1[:index]
+	clock = str1[idex: ] + clock + str1[:idex]
 
 	return clock == str2 
 		
