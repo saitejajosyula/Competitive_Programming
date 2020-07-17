@@ -7,7 +7,7 @@
 def smallestdifference(a):
 	# Your code goes here
 	
-	diff = float(inf)
+	diff = float('inf')
 
 	a = sorted(a)
 
