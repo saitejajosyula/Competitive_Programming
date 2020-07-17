@@ -8,7 +8,4 @@
 def issorted(a):
 	# your code goes here
 
-		if a == None:
-			return True
-
-		return all(a[i] <= a[i+1] for i in range(len(a)-1))
+	return all(a[i] <= a[i+1] for i in range(len(a)-1))
