@@ -7,19 +7,8 @@
 
 def issorted(a):
 	# your code goes here
-	
-	# a = str(a)
-	
-	flag = 0
 
-	i = 1
-	n = len(a)
-	for i in range(n):
+		if len(a) == 0:
+			return True
 
-		if a[i] < a[i-1]:
-			flag = 1
-		
-	if (flag):
-		return True
-	else:
-		return False
+		return all(a[i] <= a[i+1] for i in range(len(a)-1))
