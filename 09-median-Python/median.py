@@ -4,7 +4,6 @@
 # element. If the list is empty, return None.
 
 def median(a):
-	# your code goes here
 	
 	length = len(a)
 
