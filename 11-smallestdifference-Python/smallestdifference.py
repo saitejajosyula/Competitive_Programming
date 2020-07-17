@@ -6,4 +6,15 @@
 
 def smallestdifference(a):
 	# Your code goes here
-	pass
+	
+	diff = float(inf)
+
+	a = sorted(a)
+
+	for i in range(len(a)-1):
+
+		if a[i+1] - a[i] < diff:
+
+			diff = a[i+1] - a[i]
+
+	return diff
