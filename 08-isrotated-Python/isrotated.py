@@ -14,20 +14,19 @@ def isrotated(str1, str2):
 		return True
 
 
+	ant_clock = ""
 
-	clock = ""
+	ant_clock = ant_clock + str1[9:] + str1[:9]
 
-	clock = clock + str1[9:] + str1[:9]
+	return ant_clock == str2
 
-	# return clock == str2:
-
-	clock = clock + str1[9:] + str1[:9]
+	# clock = clock + str1[9:] + str1[:9]
 	clock = str2[len(str2)-1:]+ clock + str2[:len(str2)-1]
 
 	anticlock = ""
 
 	anticlock = anticlock + str2[len(str2)-2:] + str2[:len(str2)-2]
 
-	return clock == str1 or anticlock == str1 or clock == str2
+	return clock == str1 or anticlock == str1
 
 		
