@@ -15,7 +15,9 @@ def squaresum(n):
 	s = 0
 
 	while n >0 :
-		s = s + (n % 10) * (n % 10)
+
+		rem = n % 10
+		s = s + (rem **2)
 		n = n// 10
 	
 	return s
@@ -26,7 +28,6 @@ def ishappynumber(n):
 		return False
 	
 	if n == 1:
-
 		return True
 
 	total = squaresum(n)
@@ -40,4 +41,6 @@ def ishappynumber(n):
 	return False
 
 def fun_nth_happy_number(n):
-	return 0
+
+	lis = [i for i in range(100) if ishappynumber(i)]
+	return lis[n]
