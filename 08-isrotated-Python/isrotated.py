@@ -7,23 +7,27 @@
 def isrotated(str1, str2):
 	#Your code goes here
 
-	# if len(str1) != len(str2):
-	# 	return False
+	if len(str1) != len(str2):
+		return False
 
-	# if str1 == (str2)[::-1]:
-	# 	return True
+	if str1 == (str2)[::-1]:
+		return True
 
 	if sorted(str1) == sorted(str2):
 		return True
 
-	# clock = ""
+	clock = ""
 
-	# # clock = clock + str2[2:] + str2[:2]
-	# clock = str2[len(str2)-1:]+ clock + str2[:len(str2)-1]
+	# clock = clock + str2[2:] + str2[:2]
+	clock = str2[len(str2)-1:]+ clock + str2[:len(str2)-1]
 
-	# anticlock = ""
+	anticlock = ""
 
-	# anticlock = anticlock + str2[len(str2)-2:] + str2[:len(str2)-2]
-	# return clock == str1 or anticlock == str1
+	anticlock = anticlock + str2[len(str2)-2:] + str2[:len(str2)-2]
+	
+	if clock == str1 or anticlock == str1:
+		return True
+	else:
+		return False
 
 		
