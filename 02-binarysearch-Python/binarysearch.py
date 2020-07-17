@@ -16,19 +16,19 @@ def binary_search(input_array, value):
     lo = 0
     hi = len(input_array) - 1
 
-    while lo <= hi :
+    while lo <= hi:
 
-        mid = lo + (hi - lo)/2
+        mid = lo + (hi - lo)//2
 
         if input_array[mid] == value:
             return mid
         
         elif input_array[mid] < value:
 
-            lo = mid - 1
+            lo = mid + 1
         elif input_array[mid] > value:
 
-            hi = mid + 1
+            hi = mid - 1
     
     return -1
 
