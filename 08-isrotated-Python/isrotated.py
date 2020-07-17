@@ -6,4 +6,10 @@
 
 def isrotated(str1, str2):
 	#Your code goes here
-	pass
+	clock = ""
+
+	clock = str2[len(str2)-1:] + clock + str2[:len(str2)-1]
+
+	return clock == str2
+
+		
