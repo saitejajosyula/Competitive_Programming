@@ -8,16 +8,18 @@
 def issorted(a):
 	# your code goes here
 	
+	# a = str(a)
+	
 	flag = 0
 
 	i = 1
-	n = len(s)
+	n = len(a)
 	for i in range(n):
 
 		if a[i] < a[i-1]:
 			flag = 1
 		
-	if not flag:
+	if (flag):
 		return True
 	else:
 		return False
