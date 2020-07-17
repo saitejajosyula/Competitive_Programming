@@ -5,5 +5,5 @@
 
 
 def fun_replace(s1, s2, s3):
-	return s1
+	return s1.replace(s2, s3)
 
