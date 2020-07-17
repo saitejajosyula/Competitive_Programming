@@ -13,14 +13,9 @@ def issorted(a):
 	# else:
 		flag = False
 
-		for i in range(len(a)-1):
+		if ((all(a[i] <= a[i+1] for i in range(len(a)-1))) or (all(a[i] >= a[i+1] for i in range(len(a)-1)))):
+			
+			flag = True
 
-			if all(a[i] <= a[i+1]):
-				flag = True
+		return flag
 
-			return flag
-
-		if flag:
-			return True
-		else:
-			return False
