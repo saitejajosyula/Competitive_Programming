@@ -11,5 +11,4 @@ def removeduplicate(text):
 
 		if text[i] not in s:
 			s = s+text[i]
-	# print(s)
 	return s
