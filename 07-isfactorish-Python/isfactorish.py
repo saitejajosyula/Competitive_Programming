@@ -12,5 +12,16 @@
 
 
 def fun_isfactorish(n):
-	return False
+	
+	s = str(abs(n))
+
+	if len(s) != 3:
+
+		return False
+	
+	elif s[0] == s[1] or s[1] == s[2] or s[2] == s[0] or s.count('0') > 0:
+		return False
+	
+	else:
+		return True
 
