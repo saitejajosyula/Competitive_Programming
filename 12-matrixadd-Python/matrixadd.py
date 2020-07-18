@@ -17,4 +17,9 @@
 
 def matrixadd(L, M):
 	# Your code goes here
-	pass
+	
+	N = [[L[i][j] + M[i][j] for j in range(len(L[0]))] for i in range (len(L))]
+
+	for k in N:
+		print(k)
+
