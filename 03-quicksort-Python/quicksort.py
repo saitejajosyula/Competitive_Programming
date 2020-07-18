@@ -3,34 +3,32 @@ Input a list.
 Output a sorted list."""
 def quicksort(array):
 	
-	lo  = 0
+	less = []
 
-	hi = len(array) - 1
+	equal = [] 
 
-	pi = partition(array, lo, hi) # selecting pivot element
+	greater = []
 
-	quicksort(array, lo, pi-1) #sorts elements left to pivot
+	if len(array) > 1:
 
-	quicksort(array, pi+1, hi) #sorts elements right to pivot
+		pivot = array[0]
 
+		for x in array:
 
-def partition(array, low, high):
+			if x < pivot:
+				less.append(x)
+			
+			elif x == pivot:
+
+				equal.append(x)
+			else:
+
+				greater.append(x)
+			
+		return sorted(less) + equal + sorted(greater)
 	
-	pivot = array[high]
-
-	i = low - 1
-
-	for j in range(low, high):
-
-		if array[j] <= array[pivot]:
-			i = i + 1
-
-			array[i], array[j] = array[j], array[i]
-	
-	array[i+1], array[high] = array[high], array[i+1]
-
-	return i + 1
-
+	else:
+		return array
 
 
 
