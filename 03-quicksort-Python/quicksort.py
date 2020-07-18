@@ -5,7 +5,7 @@ def quicksort(array):
 	
 	lo  = 0
 
-	hi = array.length - 1
+	hi = len(array) - 1
 
 	pi = partition(array, lo, hi) # selecting pivot element
 
@@ -22,7 +22,7 @@ def partition(array, low, high):
 
 	for j in range(low, high):
 
-		if array[i] <= array[pivot]:
+		if array[j] <= array[pivot]:
 			i = i + 1
 
 			array[i], array[j] = array[j], array[i]
