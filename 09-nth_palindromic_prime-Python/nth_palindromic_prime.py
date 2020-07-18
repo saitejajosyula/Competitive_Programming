@@ -5,35 +5,21 @@
 
 def isPrime(n):
 	if n > 1:
-		for i in range(2, n//2+1):
+		for i in range(2, n):
 			if n % i == 0:
 				return False
-			return True
-
+		return True
+	return False
 
 def isPalindrome(n):
 
-	if n == 0:
-		return 2
-	
-	if n == 1:
-		return 3
+	s = str(n)
 
-	n = str(n)
-
-	if len(n) <= 1:
-		return True
-	else:
-		return n[0] == n[-1] and isPalindrome(n[1:-1])
+	return n == int(s[::-1])
 
 
 def fun_nth_palindromic_prime(n):
 
-	lis = []
-
-	for i in range(3, 1000):
-		if isPalindrome(i) and isPrime(i):
-			lis.append(i)
-	
-	return lis.__getitem__(n)
+	lis = [i for i in range(12500) if isPalindrome(i) and isPrime(i)]
+	return lis[n]
 	
