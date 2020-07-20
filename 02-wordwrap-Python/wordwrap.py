@@ -21,7 +21,7 @@ def fun_wordwrap(s, n):
 	string = s.strip().replace(" ", "-")
 
 	res = ""
-	for i in range(0, len(s)):
+	for i in range(len(string)):
 
 		if i % n == 0 and i > 0:
 			
