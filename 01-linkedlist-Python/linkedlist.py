@@ -27,8 +27,8 @@ class LinkedList(object):
             while current.next:
                 current = current.next
             
-            current.next = Element(new_element)
-            self.__sizeof__ = self.__sizeof__ + 1
+            current.next = new_element
+            # self.__sizeof__ = self.__sizeof__ + 1
 
             
     def get_position(self, position):
@@ -36,7 +36,15 @@ class LinkedList(object):
         Assume the first position is "1".
         Return "None" if position is not in the list."""
         # Your code goes here
-        pass
+        current = self.head
+
+        for i in range(1, position):
+
+            if current.value == None:
+                return None
+            else:
+                current = current.next
+        return current.value
     
     def insert(self, new_element, position):
         """Insert a new node at the given position.
