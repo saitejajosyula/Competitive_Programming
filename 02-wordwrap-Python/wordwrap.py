@@ -17,18 +17,16 @@
 
 
 def fun_wordwrap(s, n):
+	
 	out = ''
 
 	for i in range(0, len(s), n):
 
-		l =  s[i:i+n]
+		l = s[i:i+n]
 		l = l.strip()
 		l = l.replace(" ", "-")
-		out += l + "-" +"\n"
-		# print(out)
-	print(out[:-1])
+		out += l +"\n"
+	return out[:-1]
 
-fun_wordwrap(" a b c de fgh ", 4)
-# fun_wordwrap("  abcdefghij", 4)
 
  
