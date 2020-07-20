@@ -17,7 +17,7 @@
 
 
 def fun_wordwrap(s, n):
-	out = ""
+	out = ''
 
 	for i in range(0, len(s), n):
 
@@ -25,10 +25,13 @@ def fun_wordwrap(s, n):
 		l = l.strip()
 
 		l = l.replace(" ", "-")
+		print(l)
 
-		out = out + l + "\n"
+		out += l + "\n"
 
 	return out[:-1]
 
+# fun_wordwrap("abc", 3)
+fun_wordwrap("  abcdefghij", 4)
 
  
