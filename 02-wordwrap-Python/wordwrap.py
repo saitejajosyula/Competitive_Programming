@@ -18,15 +18,17 @@
 
 def fun_wordwrap(s, n):
 	
-	out = ''
+	string = s.strip().replace(" ", "-")
 
-	for i in range(0, len(s), n):
+	res = ""
+	for i in range(0, len(s)):
 
-		l = s[i:i+n]
-		l = l.strip()
-		l = l.replace(" ", "-")
-		out += l +"\n"
-	return out[:-1]
+		if i % n == 0 and i > 0:
+			
+			res = res + "\n" + string[i]
+		else:
+			res = res + string[i] + ""
+	return res
 
 
  
