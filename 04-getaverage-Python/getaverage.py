@@ -10,5 +10,20 @@
 
 
 def fun_getaverage(s): 
-	return 0.0
+
+	lis = s.split(",")
+
+	res = 0
+	count = 0
+
+	for i in lis:
+		if i.isdigit() > 0:
+
+			res = res + int(i)
+			count = count + 1
+	
+	if count == 0:
+		return 0.0
+	else:
+		return (float(res/count))
 
