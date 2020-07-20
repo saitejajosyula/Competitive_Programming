@@ -24,11 +24,11 @@ def fun_wordwrap(s, n):
 		l =  s[i:i+n]
 		l = l.strip()
 		l = l.replace(" ", "-")
-		out += l + "\n"
-		print(out)
-	return out[:-1]
+		out += l + "-" +"\n"
+		# print(out)
+	print(out[:-1])
 
-# fun_wordwrap("abc", 3)
-fun_wordwrap("  abcdefghij", 4)
+fun_wordwrap(" a b c de fgh ", 4)
+# fun_wordwrap("  abcdefghij", 4)
 
  
