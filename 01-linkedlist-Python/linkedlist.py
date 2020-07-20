@@ -52,6 +52,45 @@ class LinkedList(object):
         Inserting at position 3 means between
         the 2nd and 3rd elements."""
         # Your code goes here
+
+        if position == 1:
+
+            prev_next = self.head
+            new_element.next = prev_next
+            self.head = new_element
+            return
+        
+        current = self.head
+        for i in range(1, position):
+
+            prev_next = current.next
+            new_element.next = prev_next
+            current.next = new_element
+
+        #     newNode = Element(new_element)
+
+        #     newNode.next = self.head
+            
+        #     self.head = newNode
+        
+        # elif position == self.__sizeof__:
+        #     self.append(self.value)
+        # else:
+
+        #     current = self.head
+        #     count = 0
+        #     while current != None:
+
+        #         if count == position - 2:
+        #             break
+        #         else:
+        #             count = count + 1
+        #             current = current.next
+
+        #     newNode = Element(self.value)
+        #     newNode.next = current.next
+        #     current.next = newNode
+
         
     
     
