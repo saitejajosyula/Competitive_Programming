@@ -3,12 +3,18 @@
 
 
 def fun_hasnoprimes(l):
+
+	lis = sum(l, [])
+
+	for i in lis:
+		c = 0
+		for j in range(2, i):
+			if i % j == 0:
+				c = 1
+				break
 	
-	for i in l:
-		for j in i:
-			for k in range(2, j):
-				if j % k == 0:
-					return True
-				else:
-					return False
-	return False
+	if c == 0:
+		return False
+	
+	else:
+		return True
