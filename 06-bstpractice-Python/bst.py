@@ -21,7 +21,7 @@ class BST(object):
             rchild = self.insert(root.right, new_val)
             root.right = rchild
 
-        return root  
+        return self.root  
 
 
     def printSelf(self):
