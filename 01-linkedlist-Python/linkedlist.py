@@ -19,18 +19,26 @@ class LinkedList(object):
         
     def append(self, new_element):
         # Your code goes here
-        if self.head == None:
-            newNode = Element(new_element)
-            self.head = newNode
-        else:
-            current = self.head
+
+        current = self.head
+
+        if self.head:
             while current.next:
                 current = current.next
-            
             current.next = new_element
-            # self.__sizeof__ = self.__sizeof__ + 1
-
+        else:
+            self.head = new_element
+        # if self.head == None:
+        #     newNode = Element(new_element)
+        #     self.head = newNode
+        # else:
+        #     current = self.head
+        #     while current.next:
+        #         current = current.next
             
+        #     current.next = new_element
+        #     # self.__sizeof__ = self.__sizeof__ + 1
+
     def get_position(self, position):
         """Get an element from a particular position.
         Assume the first position is "1".
@@ -54,42 +62,41 @@ class LinkedList(object):
         # Your code goes here
 
         if position == 1:
-
-            prev_next = self.head
-            new_element.next = prev_next
-            self.head = new_element
-            return
-        
-        current = self.head
-        for i in range(1, position):
-
-            prev_next = current.next
-            new_element.next = prev_next
-            current.next = new_element
-
-        #     newNode = Element(new_element)
-
-        #     newNode.next = self.head
+            #     prev_next = self.head
+            #     new_element.next = prev_next
+            #     self.head = new_element
+            #     return
             
-        #     self.head = newNode
+            # current = self.head
+            # for i in range(1, position):
+
+            #     prev_next = current.next
+            #     new_element.next = prev_next
+            #     current.next = new_element
+
+            newNode = Element(new_element)
+
+            newNode.next = self.head
+            
+            self.head = newNode
         
-        # elif position == self.__sizeof__:
-        #     self.append(self.value)
-        # else:
+        elif position == self.__sizeof__:
+            self.append(self.value)
+        else:
 
-        #     current = self.head
-        #     count = 0
-        #     while current != None:
+            current = self.head
+            count = 0
+            while current != None:
 
-        #         if count == position - 2:
-        #             break
-        #         else:
-        #             count = count + 1
-        #             current = current.next
+                if count == position - 2:
+                    break
+                else:
+                    count = count + 1
+                    current = current.next
 
-        #     newNode = Element(self.value)
-        #     newNode.next = current.next
-        #     current.next = newNode
+            newNode = Element(self.value)
+            newNode.next = current.next
+            current.next = newNode
 
         
     
@@ -101,3 +108,15 @@ class LinkedList(object):
         if self.head.value == value:
 
             further_next = self.head.next
+            self.head = further_next
+            return
+        
+        current = self.head
+
+        while current.next is not None:
+            if current.next.value == value:
+                further_next = current.next.next 
+                current.next = further_next
+                return
+            else:
+                current = current.next
