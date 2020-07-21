@@ -3,7 +3,7 @@
 
 
 def fun_hasnoprimes(l):
-
+	
 	for i in l:
 		for j in i:
 			for k in range(2, j):
@@ -11,4 +11,4 @@ def fun_hasnoprimes(l):
 					return True
 				else:
 					return False
-
+	return False
