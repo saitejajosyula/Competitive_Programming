@@ -3,8 +3,6 @@
 # contains any duplicate values (that is, 
 # if any two values in L are equal to each other), and False otherwise.
 
-from itertools import chain
-
 def hasduplicates(L):
 	# Your code goes here
 	lis = sum(L, [])
