@@ -35,4 +35,4 @@ def destructiveshortenlongruns(L, k):
 			lis.append(L[i])
 			c = 1
 	
-		return lis
+	return lis
