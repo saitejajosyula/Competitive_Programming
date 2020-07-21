@@ -13,7 +13,9 @@ class BinaryTree(object):
         is in the tree, return
         False otherwise."""
         # Your code goes here
-        pass
+        if self.root.value == find_val or self.root is None:
+            return True
+        return False
 
     def print_tree(self):
         """Print out all tree nodes
