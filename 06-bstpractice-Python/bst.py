@@ -12,29 +12,30 @@ class BST(object):
         # Your code goes here
         node = Node(new_val)
         if self.root is None:
-            self.root = Node
-        elif root.value >= value:
-            if root.left is None:
-                root.left = Node
+            self.root = node
+        elif self.root.value > new_val:
+            if self.root.left is None:
+                self.root.left = node
             else:
-                insert(root.left, new_val)
+                insert(self.root.left, node)
         else:
-            if root.right is None:
-                root.right = Node
+            if self.root.right is None:
+                self.root.right = node
             else:
-                insert(root.right, new_val)
+                insert(self.root.right, node)
 
 
     def printSelf(self):
         # Your code goes here
-        pass
+        print(self.root)
         
     def search(self, find_val):
         # Your code goes here
         if self.root is None or self.root.value == find_val:
-            return root
-        if root.value < find_val:
-            return search(root.right, find_val)
-        else:
-            return search(root.left, find_val)
+            return False
+        return True
+        # if self.root.value < find_val:
+        #     return search(self.root.right, find_val)
+        # else:
+        #     return search(self.root.left, find_val)
 
