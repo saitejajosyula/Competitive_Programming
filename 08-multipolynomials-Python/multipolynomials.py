@@ -16,14 +16,13 @@ def multipolynomials(p1, p2):
 	lis1 = []
 	s = 0
 	for i in range(len(lis)):
-		if i != 1 and i !=2:
+		if i != 1 and i != 2:
 			lis1.append(lis[i])
 		else:
 			s = s + lis[i]
 			lis1.append(s)
 	
 	if len(lis1) <= 4:
-
 		return lis1[:1]+lis1[2:]
 	
 	elif len(lis1) >= 5:
