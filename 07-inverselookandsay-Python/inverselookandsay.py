@@ -17,7 +17,7 @@ def inverselookandsay(a):
 
 		(x, y) = a[i]
 
-		for j in range(i):
+		for j in range(x):
 			lis.append(y)
 	
 	return lis
