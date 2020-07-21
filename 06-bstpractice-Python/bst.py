@@ -17,12 +17,12 @@ class BST(object):
             if self.root.left is None:
                 self.root.left = node
             else:
-                insert(self.root.left, node)
+                return insert(self.root.left, node)
         else:
             if self.root.right is None:
                 self.root.right = node
             else:
-                insert(self.root.right, node)
+                return insert(self.root.right, node)
 
 
     def printSelf(self):
@@ -34,8 +34,8 @@ class BST(object):
         if self.root is None or self.root.value == find_val:
             return False
         return True
-        # if self.root.value < find_val:
-        #     return search(self.root.right, find_val)
-        # else:
-        #     return search(self.root.left, find_val)
+        if self.root.value < find_val:
+            search(self.root.right, find_val)
+        else:
+            search(self.root.left, find_val)
 
