@@ -17,12 +17,12 @@ class BST(object):
             if self.root.left is None:
                 self.root.left = node
             else:
-                self.insert(self.root.left, node)
+                self.insert(root.left, node)
         else:
             if self.root.right is None:
                 self.root.right = node
             else:
-                self.insert(self.root.right, node)
+                self.insert(root.right, node)
 
 
     def printSelf(self):
