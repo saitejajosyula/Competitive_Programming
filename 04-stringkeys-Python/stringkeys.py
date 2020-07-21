@@ -11,19 +11,23 @@ class HashTable(object):
         the table."""
         # Hash Value = (ASCII Value of First Letter * 100) + ASCII Value of Second Letter 
         # Your code goes here
-        pass
+        return self.table.append(string)
         
     def lookup(self, string):
         """Return the hash value if the
         string is already in the table.
         Return -1 otherwise."""
         # Your code goes here
-        pass
+        if string not in self.table:
+            return - 1
+        
+        return calculate_hash_value(string)
 
     def calculate_hash_value(self, string):
         """Helper function to calulate a
         hash value from a string."""
         # Your code goes here
-        pass
+        
+        return ord(string[0]) * 100 + ord(string[1])
 
 
