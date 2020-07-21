@@ -11,6 +11,10 @@
 def inverselookandsay(a):
 	# Your code goes here
 	
+	if a == [(),]:
+		return []
+
+
 	lis = []
 
 	for i in range(len(a)):
