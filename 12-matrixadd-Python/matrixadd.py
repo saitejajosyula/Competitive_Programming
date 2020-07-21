@@ -25,7 +25,7 @@ def matrixadd(L, M):
 
 	lis = [[0] * colL for row in range(rowL)]
 
-	if rowL != rowM and colL != colM:
+	if rowL != rowM or colL != colM:
 		return None
 	
 	else:
@@ -45,7 +45,7 @@ def matrixadd(L, M):
 
 			for i in range(rowL):
 				for j in range(colL):
-					lis[i][j] = lis[i][j] +L[i][j]+m[i][j]
+					lis[i][j] = lis[i][j] +L[i][j]+M[i][j]
 			
 			return lis
 
