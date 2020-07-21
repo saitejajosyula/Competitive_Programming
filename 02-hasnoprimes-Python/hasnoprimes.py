@@ -3,5 +3,12 @@
 
 
 def fun_hasnoprimes(l):
-	return True
+
+	for i in l:
+		for j in i:
+			for k in range(2, j):
+				if j % k == 0:
+					return True
+				else:
+					return False
 
