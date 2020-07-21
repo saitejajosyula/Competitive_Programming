@@ -14,14 +14,14 @@ class BST(object):
             return newNode(new_val)
         
         if new_val < self.root.value:
-            lchild = insert(self.root.left, new_val)
-            self.root.left = lchild
+            lchild = self.insert(root.left, new_val)
+            root.left = lchild
 
         elif new_val > self.root.value:
-            rchild = insert(self.root.right, new_val)
-            self.root.right = rchild
+            rchild = self.insert(root.right, new_val)
+            root.right = rchild
 
-        return self.root  
+        return root  
 
 
     def printSelf(self):
