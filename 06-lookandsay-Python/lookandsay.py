@@ -9,4 +9,25 @@
 
 def lookandsay(a):
 	# Your code goes here
-	pass
+	if a == []:
+		return []
+
+	lis = []
+	start = 0
+	current = a[0]
+	for i in range(len(a)):
+
+		if a[i] != current:
+
+			length = len(a[start:i])
+
+			lis = lis + [(length, current)]
+
+			current= a[i]
+			start = i
+		
+		if i == len(a) - 1:
+			length = len(a[start:])
+			lis = lis + [(length, current)]
+
+	return lis
