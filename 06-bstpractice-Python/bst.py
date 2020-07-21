@@ -31,5 +31,10 @@ class BST(object):
         
     def search(self, find_val):
         # Your code goes here
-        pass
+        if self.root is None or self.root.value == find_val:
+            return root
+        if root.value < find_val:
+            return search(root.right, find_val)
+        else:
+            return search(root.left, find_val)
 
