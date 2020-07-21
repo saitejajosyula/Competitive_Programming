@@ -11,4 +11,24 @@
 
 def shortenlongruns(L, k):
 	# Your code goes here
-	pass
+	lis = []
+	c = 0
+	for i in range(len(L)):
+
+		if L[i] not in lis:
+			lis.append(L[i])
+			c = 1
+		elif L[i] == L[i-1]:
+			c = c+1
+
+			if c >= k:
+				continue
+			else:
+				lis.append(L[i])
+		
+		elif L[i] != L[i-1]:
+			lis.append(L[i])
+			c = 1
+	
+	return lis
+	
