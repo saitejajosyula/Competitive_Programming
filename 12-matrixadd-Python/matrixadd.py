@@ -17,9 +17,35 @@
 
 def matrixadd(L, M):
 	# Your code goes here
-	
-	N = [[L[i][j] + M[i][j] for j in range(len(L[0]))] for i in range (len(L))]
 
-	for k in N:
-		print(k)
+	rowL = len(L)
+	colL = len(L[0])
+	rowM = len(M)
+	colM = len(M[0])
+
+	lis = [[0] * colL for row in range(rowL)]
+
+	if rowL != rowM and colL != colM:
+		return None
+	
+	else:
+		if colL == colM == 1:
+
+			for i in range(rowL):
+				for j in range(colL):
+
+					lis[i][j] = lis[i][j] + L[i][j]+M[i][j];
+			
+			return lis
+		
+		if len(L[1]) != len(M[1]):
+			return None
+
+		else:
+
+			for i in range(rowL):
+				for j in range(colL):
+					lis[i][j] = lis[i][j] +L[i][j]+m[i][j]
+			
+			return lis
 
