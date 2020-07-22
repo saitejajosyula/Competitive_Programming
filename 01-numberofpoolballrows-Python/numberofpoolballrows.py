@@ -5,6 +5,9 @@
 # returns 3. Note that if any balls must be in a row, then you count that row, and so 
 # numberOfPoolBallRows(7) returns 4 (since the 4th row must have a single ball in it).
 
+import math
 def fun_numberofpoolballrows(balls):
-	return 0
+
+	num = math.sqrt((2 * balls + 0.25)) - 0.5
+	return int(round(num + 0.49))
 
