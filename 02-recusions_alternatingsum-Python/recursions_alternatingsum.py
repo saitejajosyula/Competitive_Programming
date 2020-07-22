@@ -5,4 +5,4 @@
 
 
 def fun_recursions_alternatingsum(l): 
-	return sum(l[::2] - sum(l[1::2]))
+	return (sum(l[::2]) - sum(l[1::2]))
