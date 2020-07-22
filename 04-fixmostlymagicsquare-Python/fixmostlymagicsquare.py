@@ -7,5 +7,35 @@
 
 
 def fixmostlymagicsquare(L):
-	pass
-	# Your code goes here
+
+	lis = []
+
+	for i in L:
+
+		j = 0
+
+		j = j + sum(i)
+
+		lis.append(j)
+	
+	if(len(lis) != len(set(lis))):
+
+		k = max(lis) - min(lis)
+
+		largest = max(lis)
+
+		for i in lis:
+
+			if i == largest:
+
+				ind = lis.index(max(lis))
+		
+		a = L[ind]
+
+		b = a.index(max(a))
+
+		a[b] = max(a) - k
+
+		L[ind] = a
+
+		return L
