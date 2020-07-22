@@ -33,7 +33,7 @@ def fun_carrylessadd(x, y):
 		currtotal = (adjY + adjX) % 10 ** (i+1)
 
 		total = total + currtotal
-	# print(total)
+
 	return total
 	
 
