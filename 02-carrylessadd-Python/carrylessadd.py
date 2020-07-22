@@ -4,7 +4,36 @@
 # fun_carrylessadd(x, y) that takes two non-negative integers x and y and returns their 
 # carryless sum. As the paper demonstrates, fun_carrylessadd(785, 376) returns 51.
 
+def digitCounter(num):
+	
+	temp = num
+	count = 0
+	while temp > 0:
+		temp  = temp //10
+		count = count + 1
+	return count
 
 def fun_carrylessadd(x, y):
-	return 0
+
+	lenX = digitCounter(x)
+	lenY = digitCounter(y)
+
+	total = max(lenX, lenY)
+
+	count = 0
+
+	for i in range(0, total):
+
+		currX = (x // 10 ** i) % 10
+		currY = (y // 10 ** i) % 10
+
+		adjX = currX * 10 ** i
+		adjY = currY * 10 ** i
+
+		currtotal = (adjY + adjX) % 10 ** (i-1)
+
+		total = total + currtotal
+	
+	return total
+	
 
