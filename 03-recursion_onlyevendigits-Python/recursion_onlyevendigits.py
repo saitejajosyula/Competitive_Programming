@@ -13,5 +13,5 @@ def fun_recursion_onlyevendigits(l):
 		return []
 	
 	if l[0] % 2 == 0:
-		return l[0] + fun_recursion_onlyevendigits(l[1:])
-	return 0 + fun_recursion_onlyevendigits(l[1:])
+		return [l[0]] + fun_recursion_onlyevendigits(l[1:])
+	return fun_recursion_onlyevendigits(l[1:])
