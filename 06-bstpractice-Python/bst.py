@@ -14,11 +14,11 @@ class BST(object):
             return newNode(new_val)
         
         if new_val < self.root.value:
-            lchild = self.insert(root.left, new_val)
+            lchild = self.insert(self.root.left, new_val)
             root.left = lchild
 
         elif new_val > self.root.value:
-            rchild = self.insert(root.right, new_val)
+            rchild = self.insert(self.root.right, new_val)
             root.right = rchild
 
         return self.root  
@@ -34,8 +34,8 @@ class BST(object):
     def search(self, find_val):
         # Your code goes here
         if self.root is None or self.root.value == find_val:
-            return False
-        return True
+            return True
+        return False
         if self.root.value < find_val:
             search(self.root.right, find_val)
         else:
