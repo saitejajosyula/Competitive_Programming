@@ -9,7 +9,7 @@ def digitCounter(num):
 	temp = num
 	count = 0
 	while temp > 0:
-		temp  = temp //10
+		temp  = temp // 10
 		count = count + 1
 	return count
 
@@ -18,11 +18,11 @@ def fun_carrylessadd(x, y):
 	lenX = digitCounter(x)
 	lenY = digitCounter(y)
 
-	total = max(lenX, lenY)
+	length = max(lenX, lenY)
 
-	count = 0
+	total = 0
 
-	for i in range(0, total):
+	for i in range(0, length):
 
 		currX = (x // 10 ** i) % 10
 		currY = (y // 10 ** i) % 10
@@ -33,7 +33,7 @@ def fun_carrylessadd(x, y):
 		currtotal = (adjY + adjX) % 10 ** (i+1)
 
 		total = total + currtotal
-	
+	# print(total)
 	return total
 	
 
