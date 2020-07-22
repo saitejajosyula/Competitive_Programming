@@ -19,5 +19,35 @@
 
 def recursion_binarysearchvalues(L, v):
 	# Your codes goes here
-	pass
 	
+	lo = 0
+
+	hi = len(L)-1
+	
+	lis = []
+
+	return binarySearch(L, lo, hi, v, lis)
+
+
+def binarySearch(L, lo, hi, v, lis):
+
+	if lo > hi:
+		return lis
+	
+	mid = (lo + hi)//2
+
+	lis = lis + [(mid, L[mid])]
+
+	if L[mid] == item:
+		return lis
+	
+	else:
+		if v < L[mid]:
+			last = mid - 1
+
+			return binarySearch(L, lo, last, v, lis)
+		
+		else:
+			first = mid + 1
+
+			return binarySearch(L, first, hi, v, lis)
