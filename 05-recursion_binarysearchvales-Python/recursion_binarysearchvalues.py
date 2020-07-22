@@ -38,7 +38,7 @@ def binarySearch(L, lo, hi, v, lis):
 
 	lis = lis + [(mid, L[mid])]
 
-	if L[mid] == item:
+	if L[mid] == v:
 		return lis
 	
 	else:
