@@ -16,7 +16,7 @@ def iswithproperty309(n):
 
 	while n > 0:
 
-		if i!= n%10:
+		if i != n % 10:
 
 			n = n // 10
 		
