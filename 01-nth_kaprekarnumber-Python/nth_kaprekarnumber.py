@@ -39,8 +39,7 @@ def fun_nth_kaprekarnumber(n):
         count = count + 1
 
         if(isKaprekarNumber(count)):
+            
             i = i + 1
     
     return count
-
-    return 1;
