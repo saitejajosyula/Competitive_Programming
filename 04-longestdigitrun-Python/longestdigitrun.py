@@ -10,12 +10,12 @@ def longestdigitrun(n):
 	n = abs(n)
 
 	l = 1
-	l = n % 10
+	ld = n % 10
 
 	r = 1
 
 	index = n
-	count = 1
+	count = 0
 
 	while index != 0:
 
