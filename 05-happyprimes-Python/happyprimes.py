@@ -20,7 +20,9 @@ def sumOfSquaresOfDigits(n):
     
     while n!= 0:
 
-        s = s + (n % 10)**2
+        rem = n % 10
+
+        s = s + rem**2
 
         n = n // 10
 
@@ -48,15 +50,22 @@ def ishappynumber(n):
 
 def isprime(n):
 
-    if n > 1:
-
-        for i in range(2,n):
-
-            if n % i == 0:
-                return False
-
+    if n < 2:
+        return False
+    
+    if n == 2:
         return True
-    return False
+
+    if n % 2 == 0:
+        return False
+
+    factor = round(n **0.5)
+    for i in range(3, factor + 1, 2):
+        if n % i == 0:
+            
+            return False
+    return True
+    
 
 def ishappyprimenumber(n):
 
