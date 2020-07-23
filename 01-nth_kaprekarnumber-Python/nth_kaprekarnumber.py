@@ -9,5 +9,38 @@
 
 import math
 
+def isKaprekarNumber(n):
+    if n < 1:
+        return False
+    
+    if n == 1:
+        return True
+    
+    l = len(str(n**2))
+
+    for i in range(1, l):
+
+        a = n**2 //10 **i
+        b = n**2 % 10 **i
+
+        if b != 0 and a + b == n:
+            return True
+    
+    return False
+
 def fun_nth_kaprekarnumber(n):
+
+    i = -1
+
+    count = 0
+
+    while(i < n):
+
+        count = count + 1
+
+        if(isKaprekarNumber(count)):
+            i = i + 1
+    
+    return count
+
     return 1;
