@@ -29,6 +29,7 @@ def iswithproperty309(n):
 			i = i + 1
 
 			if count > 9:
+				
 				return True
 	return False
 
