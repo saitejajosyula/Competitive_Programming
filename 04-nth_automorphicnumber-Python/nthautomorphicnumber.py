@@ -24,7 +24,7 @@ def nthautomorphicnumbers(n):
 	
 	lis = []
 
-	for i in range(200000):
+	for i in range(100000):
 
 		if isautomorphic(i):
 			
