@@ -7,12 +7,10 @@ def isautomorphic(n):
 
 	sq = n ** 2
 
-	rem = sq % 10
-
 	while n > 0:
 
-		if n % 10 != rem:
-
+		if n % 10 != sq % 10:
+			
 			return False
 		
 		n = n // 10
@@ -26,7 +24,7 @@ def nthautomorphicnumbers(n):
 	
 	lis = []
 
-	for i in range(11000):
+	for i in range(200000):
 
 		if isautomorphic(i):
 			
