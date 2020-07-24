@@ -10,7 +10,7 @@ def tidynumber(n):
 
     prev = 10
 
-    while(n):
+    while n:
 
         rem = n % 10
 
@@ -20,7 +20,7 @@ def tidynumber(n):
 
             return False
         
-        prev = n
+        prev = rem
 
     return True 
 
@@ -31,7 +31,7 @@ def fun_nth_tidynumber(n):
     for i in range(2900):
 
         if tidynumber(i) :
-            
+
             lis.append(i)
     
     return lis[n+1]
