@@ -71,3 +71,4 @@ def nthcircularprime(n):
 		if isCircularPrime(i):
 			lis.append(i)
 	
+	return lis[n]
