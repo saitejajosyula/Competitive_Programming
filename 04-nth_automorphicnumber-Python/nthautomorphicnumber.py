@@ -13,7 +13,7 @@ def isautomorphic(n):
 
 		if n % 10 != rem:
 
-			return Fals
+			return False
 		
 		n = n // 10
 
@@ -28,6 +28,8 @@ def nthautomorphicnumbers(n):
 
 	for i in range(11000):
 
-		lis.append(i)
+		if isautomorphic(i):
+			
+			lis.append(i)
 	
 	return lis[n-1]
