@@ -8,9 +8,40 @@
 # as that will not be efficient enough to get past the autograder. 
 # Hint: one way to solve this is to start at n and grow in each direction until you find a Kaprekar number.
 
-
-
 import math
 
+def isKaprekarNumber(n):
+
+    if n < 1:
+        return False
+
+    if n == 1:
+
+        return True
+
+    l = len(str(n**2))
+
+    for i in range(1, l):
+
+        a = n**2 // 10 ** i
+        b = n**2 % 10 ** i
+
+        if b != 0 and a+b == n:
+
+            return True
+        
+    return False
+
 def fun_nearestkaprekarnumber(n):
-    return 1
+    
+    count = -1
+
+    while True:
+
+        count = count + 1
+
+        if isKaprekarNumber(n-count) == True :
+
+            return n - count
+        elif isKaprekarNumber(n+count) == True:
+            return n + count
