@@ -5,6 +5,70 @@
 # 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, 97, 113, 131, 197... To see why 197 is a Circular prime, 
 # note that 197 is prime, as is 971 (rotated left), as is 719 (rotated left again).
 
+def isprime(n):
+
+	if n > 1:
+
+		for i in range(2, n):
+
+			if n % i == 0:
+
+				return False
+		return True
+	
+	return False
+
+def rotateNumber(n):
+
+	temp = n
+
+	flag = 0
+
+	while temp != 0:
+
+		temp = temp // 10
+
+		flag = flag + 1
+
+	
+	n1 = n % 10
+
+	n2 = n // 10
+
+	return n1 * (10 ** (flag  + 1)) + n2
+
+def isCircularPrime(n):
+
+	if n == 0:
+
+		return False
+	
+	temp = n
+	flag = 0
+
+	while temp != 0:
+
+		temp = temp // 10
+
+		flag = flag + 1
+	
+	for i in range(flag):
+
+		if not isprime(n):
+			return False
+		
+		n = rotateNumber(n)
+	
+	return True
+
 def nthcircularprime(n):
 	# Your code goes here
-	pass
+	
+	lis = []
+
+	for i in range(200000):
+
+		if isCircularPrime(i):
+			lis.append(i)
+	
+	return lis[n]
