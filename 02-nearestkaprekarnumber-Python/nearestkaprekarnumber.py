@@ -26,7 +26,7 @@ def isKaprekarNumber(n):
         a = n**2 // 10 ** i
         b = n**2 % 10 ** i
 
-        if b != 0 and a+b == n:
+        if b != 0 and a + b == n:
 
             return True
         
