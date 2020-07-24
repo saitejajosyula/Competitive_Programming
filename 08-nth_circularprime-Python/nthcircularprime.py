@@ -66,7 +66,7 @@ def nthcircularprime(n):
 	
 	lis = []
 
-	for i in range(1000):
+	for i in range(20000):
 
 		if isCircularPrime(i):
 			lis.append(i)
