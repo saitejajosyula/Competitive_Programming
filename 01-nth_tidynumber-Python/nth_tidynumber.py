@@ -25,4 +25,13 @@ def tidynumber(n):
     return True 
 
 def fun_nth_tidynumber(n):
-    pass
+    
+    lis = []
+
+    for i in range(2900):
+
+        if tidynumber(i) :
+            
+            lis.append(i)
+    
+    return lis[n+1]
