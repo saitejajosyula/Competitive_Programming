@@ -32,8 +32,8 @@ def fun_nth_uglynumber(n):
     if n == 0:
 
         return 1
-        
-    i = 1
+
+    i = 2
 
     count = 1
 
