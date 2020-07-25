@@ -3,28 +3,41 @@
 # is the result of multiplying the two matrices. Return None if the 
 # two matrices cannot be multiplied for any reason.
 
-import numpy as np
 
 def fun_matrixmultiply(m1, m2):
-
-    if len(m2) != len(m1[0]):
-        return None
     
-    lis = [[0 for i in range(len(m2[0]))] for j in range(len(m1))]
-
-    for i in range(len(m1)):
-
-        for j in range(len(m2[0])):
-
-            output = 0
-
-            for k in range(len(m1[0])):
-
-                output = output + m1[i][k] * m2[k][j]
+    row1 = len(m1)
+    row2 = len(m2)
+    col1 = len(m1[0])
+    
+    col2 = len(m2[0])
+    if col1 == row2:
+        
+        m3 = []
+        
+        for row in range(row1):
             
-            lis[i][j] = output
-    
-    return lis
+            m3 = m3 + [[0]*col2]
+        
+    elif col2 == row1:
+            
+            m3 = []
+            
+            for row in range(row2):
+                
+                m3 = m3 + [[0] * col1]
+        
+    rows = len(m3)
+    cols = len(m3[0])
+
+    for col in range(cols):
+        collist = []
+        
+        for row in range(rows):
+            
+            collist.append(row)
+        
+    return 42;
 
 
 
