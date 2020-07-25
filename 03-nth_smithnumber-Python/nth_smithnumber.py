@@ -7,6 +7,33 @@
 # so fun_nthsmithnumber(0) should return 4
 # so fun_nthsmithnumber(1) should return 22
 
+def sumOfdigits(n):
 
+    t = 0
+
+    while n > 0:
+
+        rem = n % 10
+
+        t = t + rem
+
+        n = n // 10
+    
+    return t
+
+
+def isprime(n):
+
+    if n > 1:
+
+        for i in range(2, n):
+
+            if n % i == 0:
+
+                return False
+            
+        return True
+    
+    return False
 def fun_nth_smithnumber(n):
     return 1
