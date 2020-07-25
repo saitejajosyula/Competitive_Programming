@@ -35,7 +35,7 @@ class nthtenlyprime {
 
 				while(t > 0) {
 
-					sum = sum + t % 10;
+					sum += t % 10;
 
 					t = t / 10;
 				}
