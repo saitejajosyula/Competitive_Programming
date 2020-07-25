@@ -7,6 +7,8 @@
 # so fun_nthsmithnumber(0) should return 4
 # so fun_nthsmithnumber(1) should return 22
 
+import math
+
 def sumOfdigits(n):
 
     t = 0
@@ -35,5 +37,61 @@ def isprime(n):
         return True
     
     return False
+
+def sumOfFactors(n):
+
+    lis = []
+
+    while n % 2 == 0 and n > 0:
+
+        lis.append(int(2))
+
+        n = n /2
+
+    for i in range(3, int(math.sqrt(n))+1, 2):
+
+        while n % i == 0:
+
+            lis.append(int(i))
+
+            n = n/i
+    
+    if n > 2:
+
+        lis.append(int(n))
+
+    total = 0
+
+    for i in lis:
+
+        if len(str(i)) == 1:
+
+            total = total + i
+        
+        elif len(str(i)) > 1 and i is not n:
+
+            total = total + sumOfdigits(i)
+    return total
+
+
+def smith(n):
+
+    if sumOfdigits(n) == sumOfFactors(n):
+
+        return True
+    
+    else:
+
+        return False
+
 def fun_nth_smithnumber(n):
-    return 1
+
+    lis = []
+
+    for i in range(1, 500):
+
+        if smith(i) and not isprime(i):
+
+            lis.append(i)
+    
+    return lis[n]
