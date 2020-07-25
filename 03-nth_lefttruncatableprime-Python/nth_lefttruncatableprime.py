@@ -43,7 +43,7 @@ def LeftTruncatablePrime(n):
     else:
         x = digitcount(n)
 
-        for i in range(1, x):
+        for x in range(1, x):
 
             m = n % (10**x)
         
@@ -58,7 +58,9 @@ def fun_nth_lefttruncatableprime(n):
     lis = []
 
     for i in range(4000):
+
         if LeftTruncatablePrime(i):
+
             lis.append(i)
     
     return lis[n]
