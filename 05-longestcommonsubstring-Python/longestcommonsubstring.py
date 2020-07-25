@@ -9,4 +9,25 @@
 
 def longestcommonsubstring(s1, s2):
     # Yourcode goes here
-    pass
+    
+    s = ""
+
+    for i in range(len(s1)):
+
+        for j in range(i+1, len(s1)+1):
+            
+            sub = s1[i:j]
+
+            if sub in s2:
+
+                if len(sub) > len(s):
+
+                    s = sub
+                
+                elif len(sub) == len(s):
+
+                    if sub < s:
+
+                        s = sub
+    
+    return s
