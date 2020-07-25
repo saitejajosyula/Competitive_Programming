@@ -6,9 +6,59 @@
 # So nthLeftTruncatablePrime(0) retunearestKaprekarNumber(n)rns 2, and 
 # nthLeftTruncatablePrime(10) returns 53.
 
-
-
 import math
 
+def isprime(n):
+
+    if n > 1:
+
+        for i in range(2, n):
+
+            if n % i == 0:
+
+                return False
+        return True
+    
+    return False
+
+def digitcount(n):
+
+    n = abs(n)
+
+    count = 1
+
+    while n > 10:
+
+        n = n // 10
+
+        count = count + 1
+
+    return count
+
+def LeftTruncatablePrime(n):
+
+    if isprime(n) == False or str(n).__contains__("0"):
+        return False
+    
+    else:
+        x = digitcount(n)
+
+        for i in range(1, x):
+
+            m = n % (10**x)
+        
+            if isprime(m) == False:
+                return False
+        
+        return True
+
+
 def fun_nth_lefttruncatableprime(n):
-    return 1
+
+    lis = []
+
+    for i in range(4000):
+        if LeftTruncatablePrime(i):
+            lis.append(i)
+    
+    return lis[n]
