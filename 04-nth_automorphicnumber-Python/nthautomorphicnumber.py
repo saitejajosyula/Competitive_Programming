@@ -7,7 +7,7 @@ def isautomorphic(n):
 
 	n1 = str(n)
 
-	s = n1 **2
+	s = n ** 2 
 
 	sqr = str(s)
 
