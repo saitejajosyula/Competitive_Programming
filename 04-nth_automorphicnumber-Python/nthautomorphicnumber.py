@@ -5,29 +5,67 @@
 
 def isautomorphic(n):
 
-	sq = n ** 2
+	n1 = str(n)
 
-	while n > 0:
+	s = n1 **2
 
-		if n % 10 != sq % 10:
-			
-			return False
-		
-		n = n // 10
+	sqr = str(s)
 
-		sq = sq // 10
-	
-	return True
+	l = sqr[(-1 * len(n1)):]
+
+	return n1 == l
 
 def nthautomorphicnumbers(n):
 	# Your code goes here
 	
 	lis = []
 
-	for i in range(100000):
+	for i in range(10):
 
 		if isautomorphic(i):
 			
 			lis.append(i)
 	
+	
+	count = 4
+
+	temp1 = 5
+	temp2 = 6
+
+	while count < n+2:
+
+		counter = 1
+
+		while True:
+
+			s1 = str(counter) + str(temp1)
+
+			if isautomorphic(int(s1)):
+				break
+				
+			counter += 1
+		
+		temp1 = int(str(counter) + str(temp1))
+
+		lis.append(temp1)
+
+		counter = 1
+
+		while True:
+
+			s2 = str(counter) + str(temp2)
+
+			if isautomorphic(int(s2)) :
+				break
+				
+			counter += 1
+		
+		temp2 = int(str(counter) + str(temp2))
+
+		lis.append(temp2)
+
+		count = count + 2
+	
+	lis.sort()
+
 	return lis[n-1]
