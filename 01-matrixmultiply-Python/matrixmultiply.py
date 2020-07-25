@@ -9,8 +9,8 @@ def fun_matrixmultiply(m1, m2):
     row1 = len(m1)
     row2 = len(m2)
     col1 = len(m1[0])
-    
     col2 = len(m2[0])
+
     if col1 == row2:
         
         m3 = []
@@ -37,7 +37,7 @@ def fun_matrixmultiply(m1, m2):
             
             collist.append(row)
         
-    return 42;
+    return collist;
 
 
 
