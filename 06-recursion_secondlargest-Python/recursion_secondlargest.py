@@ -13,6 +13,34 @@
 # Again, you do not need to sort the list. We didn't sort it in our sample solution. We just tracked the two largest 
 # values as we recursively traversed the list. Also, you may not use loops/iteration in this problem
 
+def recursion(L, first, last, m):
+
+	if len(L) < 2:
+
+		return None
+	elif m >= len(L):
+		return last
+	
+	else:
+
+		x = L[m]
+
+		if first == None:
+
+			first = x
+		
+		elif x >= first:
+
+			last = first
+			first = x
+		
+		elif (last == None or x > last) and x < first:
+			last = x
+		
+		return recursion(L, first,last, m+1)
+
+
 def recursion_secondlargest(L):
 	# Your code goes here
-	pass
+
+	return recursion(L, None, None, 0)
