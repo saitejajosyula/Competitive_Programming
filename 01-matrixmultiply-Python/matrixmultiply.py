@@ -11,6 +11,9 @@ def fun_matrixmultiply(m1, m2):
     col1 = len(m1[0])
     col2 = len(m2[0])
 
+    if row2 != col1:
+
+        return None
     if col1 == row2:
         
         m3 = []
