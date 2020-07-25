@@ -6,33 +6,33 @@
 
 def fun_replace(s1, s2, s3):
 
-	a = s1.count(s2)
+	c = s1.count(s2)
 
-	if a == 0:
+	if c == 0:
 
 		return s1
 	
-	elif a == 1:
+	elif c == 1:
 
-		s = ""
+		STR = ""
 
 		first = s1.find(s2)
 		last = first + len(s2)
 
-		s = s1[0:first] + s3 + s1[last:]
+		STR = s1[0:first] + s3 + s1[last:]
 
-		return s
+		return STR
 	
 	else:
 
-		s = s1
+		STR = s1
 		
-		for i in range(c):
+		for x in range(c):
 
-			first = s.find(s2)
+			first = STR.find(s2)
 			last = first + len(s2)
 
-			s = s[0:first] + s3 + s[last:]
+			STR = STR[0:first] + s3 + STR[last:]
 
-		return s
+		return STR
 
