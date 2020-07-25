@@ -6,7 +6,7 @@
 
 class nthtenlyprime {
 
-	public boolean isPrime(int n) {
+	public static boolean isPrime(int n) {
 
 		int count = 0;
 
