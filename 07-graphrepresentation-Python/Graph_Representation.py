@@ -2,6 +2,7 @@ class Node(object):
     def __init__(self, value):
         self.value = value
         self.edges = []
+        self.visited = False
 
 class Edge(object):
     def __init__(self, value, node_from, node_to):
@@ -39,9 +40,13 @@ class Graph(object):
 
     def get_edge_list(self):
         edge_list = []
+
+        for i in self.edges:
+            edge_list.append((i))
         return edge_list
 
     def get_adjacency_list(self):
+        max_index = 0
         adjacency_list = [None] * (max_index + 1)
         return adjacency_list
     
