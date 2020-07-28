@@ -13,7 +13,7 @@ def fun_interleave(s1,s2):
 
 		output = ""
 
-		for i in rangae(len(s2)):
+		for i in range(len(s2)):
 
 			output = output + s1[i] + s2[i]
 		
@@ -53,7 +53,7 @@ def fun_interleave(s1,s2):
 
 			output = ""
 
-			for i in range(lne(s2)):
+			for i in range(len(s2)):
 				output = output + s1[i]+s2[i]
 
 			output = output + s1[(len(s1)-len(s2))-2:]
