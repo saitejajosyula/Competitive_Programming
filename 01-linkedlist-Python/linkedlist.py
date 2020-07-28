@@ -20,40 +20,44 @@ class LinkedList(object):
     def append(self, new_element):
         # Your code goes here
 
-        current = self.head
+        if self.head == None:
 
-        if self.head:
-            while current.next:
-                current = current.next
-            current.next = new_element
-        else:
             self.head = new_element
-        # if self.head == None:
-        #     newNode = Element(new_element)
-        #     self.head = newNode
-        # else:
-        #     current = self.head
-        #     while current.next:
-        #         current = current.next
+        
+        else:
+
+            temp = self.head
+            while temp.next != None:
+
+                temp = temp.next
             
-        #     current.next = new_element
-        #     # self.__sizeof__ = self.__sizeof__ + 1
+            temp.next = new_element
 
     def get_position(self, position):
         """Get an element from a particular position.
         Assume the first position is "1".
         Return "None" if position is not in the list."""
         # Your code goes here
-        current = self.head
 
-        for i in range(1, position):
+        temp = self.head
+        
+        if temp == None:
 
-            if current.value == None:
+            return None
+        
+        for i in range(1, position, 1):
+
+            if temp.next == None:
+
                 return None
+            
             else:
-                current = current.next
-        return current.value
-    
+
+                temp = temp.next 
+        
+        return temp
+       
+
     def insert(self, new_element, position):
         """Insert a new node at the given position.
         Assume the first position is "1".
@@ -61,42 +65,26 @@ class LinkedList(object):
         the 2nd and 3rd elements."""
         # Your code goes here
 
-        if position == 1:
-            #     prev_next = self.head
-            #     new_element.next = prev_next
-            #     self.head = new_element
-            #     return
-            
-            # current = self.head
-            # for i in range(1, position):
+        temp = self.head
 
-            #     prev_next = current.next
-            #     new_element.next = prev_next
-            #     current.next = new_element
+        if temp == None:
 
-            newNode = Element(new_element)
-
-            newNode.next = self.head
-            
-            self.head = newNode
+            return None
         
-        elif position == self.__sizeof__:
-            self.append(self.value)
-        else:
 
-            current = self.head
-            count = 0
-            while current != None:
+        for i in range(1, position-1, 1):
 
-                if count == position - 2:
-                    break
-                else:
-                    count = count + 1
-                    current = current.next
+            if temp.next == None:
+                return None
+            
+            else:
+                temp = temp.further_next
+        
+        element = temp.next 
 
-            newNode = Element(self.value)
-            newNode.next = current.next
-            current.next = newNode
+        temp.next = new_element
+
+        new_element.next = element
 
         
     
@@ -104,19 +92,22 @@ class LinkedList(object):
     def delete(self, value):
         """Delete the first node with a given value."""
         # Your code goes here
-        
-        if self.head.value == value:
 
-            further_next = self.head.next
-            self.head = further_next
-            return
-        
-        current = self.head
+        temp = self.head
 
-        while current.next is not None:
-            if current.next.value == value:
-                further_next = current.next.next 
-                current.next = further_next
-                return
-            else:
-                current = current.next
+        if temp == None:
+
+            return None
+        
+        if temp.value == value:
+
+            self.head = temp.next 
+        
+        else:
+
+            while temp.next != None:
+
+                if temp.next.value == value:
+
+                    temp.next = temp.next.further_next
+                    break
