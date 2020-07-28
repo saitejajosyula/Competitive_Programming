@@ -105,5 +105,5 @@ class LinkedList(object):
 
                 if temp.next.value == value:
 
-                    temp.next = temp.next.further_next
+                    temp.next = temp.next.next 
                     break
