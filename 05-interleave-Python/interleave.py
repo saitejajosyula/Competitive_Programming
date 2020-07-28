@@ -5,8 +5,6 @@
 # string onto the end of the new string. For example ('a#', 'cD!f2') would return 
 # the string "ac#D!f2". Assume that both s1 and s2 will always be strings.
 
-
-
 def fun_interleave(s1,s2):
 
 	if len(s1) == len(s2):
@@ -30,7 +28,7 @@ def fun_interleave(s1,s2):
 		
 		output = output + s2[(len(s2) - len(s1)-1):]
 
-		return result
+		return output
 	
 	else:
 
