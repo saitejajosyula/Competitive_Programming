@@ -71,7 +71,6 @@ class LinkedList(object):
 
             return None
         
-
         for i in range(1, position-1, 1):
 
             if temp.next == None:
@@ -85,9 +84,6 @@ class LinkedList(object):
         temp.next = new_element
 
         new_element.next = element
-
-        
-    
     
     def delete(self, value):
         """Delete the first node with a given value."""
