@@ -21,14 +21,13 @@ class LinkedList(object):
         # Your code goes here
 
         if self.head == None:
-
             self.head = new_element
         
         else:
 
             temp = self.head
-            while temp.next != None:
 
+            while temp.next != None:
                 temp = temp.next
             
             temp.next = new_element
@@ -77,7 +76,7 @@ class LinkedList(object):
                 return None
             
             else:
-                temp = temp.further_next
+                temp = temp.next 
         
         element = temp.next 
 
